@@ -1,9 +1,6 @@
 #!/bin/bash
-for file in "pdjson.c"; do
-  $CC $CFLAGS -c ${file}
-done
+$CC $CFLAGS -c pdjson.c
 
-rm -f ./test*.o
 llvm-ar rcs libfuzz.a *.o
 
 
